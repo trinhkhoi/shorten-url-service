@@ -1,0 +1,34 @@
+<!ELEMENT dataset (
+        customer*,
+        url*,
+        customer_url*)>
+
+        <!ELEMENT customer EMPTY>
+        <!ATTLIST customer
+                id CDATA #REQUIRED
+                user_name CDATA #REQUIRED
+                password CDATA #REQUIRED
+                created_at CDATA #REQUIRED
+                updated_at CDATA #REQUIRED
+                deleted_at CDATA #IMPLIED
+                >
+
+        <!ELEMENT url EMPTY>
+        <!ATTLIST url
+                id CDATA #REQUIRED
+                long_url CDATA #REQUIRED
+                short_url CDATA #REQUIRED
+                created_at CDATA #REQUIRED
+                updated_at CDATA #REQUIRED
+                deleted_at CDATA #IMPLIED
+                >
+
+        <!ELEMENT customer_url EMPTY>
+        <!ATTLIST customer_url
+                id CDATA #REQUIRED
+                id_customer CDATA #REQUIRED
+                id_url CDATA #REQUIRED
+                created_at CDATA #REQUIRED
+                updated_at CDATA #REQUIRED
+                deleted_at CDATA #IMPLIED
+                >

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE dataset SYSTEM "./src/test/resources/dtd/shortenurl_db.dtd">
+<dataset>
+    <customer id="1" user_name="test" password="test" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+    <url id="1" long_url="https://example.app/test/content" short_url="http://localhost:8080/public/url/b" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+    <url id="2" long_url="https://example.app/test/content1" short_url="http://localhost:8080/public/url/c" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+    <customer_url id="1" id_customer="1" id_url="1" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+    <customer_url id="2" id_customer="1" id_url="2" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+</dataset>

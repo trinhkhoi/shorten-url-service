@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE dataset SYSTEM "./src/test/resources/dtd/shortenurl_db.dtd">
+<dataset>
+    <customer id="1" user_name="test" password="$2a$10$COtD3ZljOG/7acsivHBqGeqjnJ5R8HbQ3TyDv.1iBLjJDcMOMlZeG" created_at="[nowWithTime]" updated_at="[nowWithTime]" />
+</dataset>

@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: mariadb
+  - include:
+      file: src/main/resources/database/01_init_database.yml

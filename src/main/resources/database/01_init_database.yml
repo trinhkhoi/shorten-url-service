@@ -1,0 +1,100 @@
+databaseChangeLog:
+- changeSet:
+    id: 01_init_customer_database
+    author: khoitd
+    changes:
+    - createTable:
+        tableName: customer
+        columns:
+        - column:
+            name: id
+            type: bigint
+            autoIncrement: true
+            constraints:
+            - primaryKey: true
+            - nullable: false
+        - column:
+            name: user_name
+            type: varchar(50)
+            constraints:
+            - nullable: false
+        - column:
+            name: password
+            type: varchar(255)
+            constraints:
+            - nullable: false
+        - column:
+            name: created_at
+            type: datetime
+        - column:
+            name: updated_at
+            type: datetime
+        - column:
+            name: deleted_at
+            type: datetime
+    - addUniqueConstraint:
+          columnNames: user_name
+          constraintName: u_user_name
+          tableName: customer
+          validate: true
+    - createTable:
+        tableName: url
+        columns:
+        - column:
+            name: id
+            type: bigint
+            autoIncrement: true
+            constraints:
+            - primaryKey: true
+            - nullable: false
+        - column:
+            name: long_url
+            type: text
+            constraints:
+            - nullable: false
+        - column:
+            name: short_url
+            type: varchar(255)
+        - column:
+            name: created_at
+            type: datetime
+        - column:
+            name: updated_at
+            type: datetime
+        - column:
+            name: deleted_at
+            type: datetime
+        - addUniqueConstraint:
+            columnNames: long_url
+            constraintName: u_long_url
+            tableName: url
+            validate: true
+    - createTable:
+        tableName: customer_url
+        columns:
+        - column:
+            name: id
+            type: bigint
+            autoIncrement: true
+            constraints:
+            - primaryKey: true
+            - nullable: false
+        - column:
+            name: id_customer
+            type: bigint
+            constraints:
+            - nullable: false
+        - column:
+            name: id_url
+            type: bigint
+            constraints:
+            - nullable: false
+        - column:
+            name: created_at
+            type: datetime
+        - column:
+            name: updated_at
+            type: datetime
+        - column:
+            name: deleted_at
+            type: datetime
